@@ -19,11 +19,7 @@ end
 #array of calls
 #method tells us where not anything is longer than 4 characters in the array
 def long_planeteer_calls(calls)
-  if calls.any? { |call| call.length > 4  }
-    return true
-  else
-    return false
-  end
+  calls.any? { |call| call.length > 4  }
 end
 
 #accept 1 array of strings
