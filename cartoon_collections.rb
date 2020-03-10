@@ -1,16 +1,42 @@
-def roll_call_dwarves# code an argument here
-  # Your code here
+#accept 1 argument
+#puts each name as 1. Name
+#use each_with_index
+def roll_call_dwarves(array)
+  array.each_with_index do |item, index|
+    index += 1
+    puts "#{index}. #{item}"
+  end
 end
 
-def summon_captain_planet# code an argument here
-  # Your code here
+#accept 1 array argument
+#capitalize the first letter in each element
+#use map or collect
+#return value should be array
+def summon_captain_planet(array)
+  array.map { |call| call.capitalize + "!"  }
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
+#array of calls
+#method tells us where not anything is longer than 4 characters in the array
+def long_planeteer_calls(calls)
+  if calls.any? { |call| call.length > 4  }
+    return true
+  else
+    return false
+  end
 end
 
-def find_the_cheese# code an argument here
+#accept 1 array of strings
+#"look through strings" = iterate
+#finds a type of cheese = matches a string in the array of cheese_types
+#returns type of cheese if found
+def find_the_cheese(array)
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
+  i = 0
+  while i < array.length
+    return cheese_types[i] if array.include?(cheese_types[i])
+    i += 1
+  end
+
 end
